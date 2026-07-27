@@ -1,0 +1,12 @@
+# Ignore downloaded audio files and other generated content
+downloads/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Editor metadata
+.vscode/
+*.swp
+*.swo
+.DS_Store

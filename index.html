@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>infosik</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-badge">infosik</div>
+        <h1>infosik</h1>
+        <p class="subtitle">Suche nach Alben, entdecke Cover, hole Lyrics und lade deine ausgewählten Songs als Paket herunter.</p>
+        <div class="hero-info">
+            <div class="hero-card">
+                <strong>Was du hier machst</strong>
+                <span>Finde Releases, prüfe Barcodes und sammle Songs für einen schnellen Download.</span>
+            </div>
+            <div class="hero-card">
+                <strong>Mit dabei</strong>
+                <span>Cover, Lyrics, Metadaten und ein ZIP-Paket für jede Auswahl.</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Song- oder Albumtitel eingeben (z.B. Sehnsucht)...">
+        <button onclick="searchRelease()">Suchen</button>
+    </div>
+
+    <ul id="resultsList" class="results-list"></ul>
+
+    <div id="infoCard" class="card">
+        <div class="detail-head">
+            <img id="coverImage" class="detail-cover" alt="Albumcover">
+            <div>
+                <h2 id="cardTitle">Albumtitel</h2>
+                <p id="cardArtistLine" style="margin: 4px 0 0; color: #94a3b8;">Künstler</p>
+            </div>
+        </div>
+
+        <div class="detail-actions">
+            <button id="addSelectionButton" type="button">Zur Auswahl hinzufügen</button>
+            <button id="downloadCurrentButton" type="button" class="secondary">Aktuellen Song downloaden</button>
+        </div>
+
+        <div class="audio-download-box">
+            <input type="url" id="audioUrlInput" placeholder="Direkter Audio-Link (z. B. .mp3, .m4a, .wav)">
+            <button id="downloadSongButton" type="button">Song herunterladen</button>
+        </div>
+
+        <div class="audio-download-box">
+            <input type="text" id="audioSearchInput" placeholder="Musik direkt suchen (z. B. Songtitel + Interpret)">
+            <button id="searchAudioButton" type="button">Musik direkt ziehen</button>
+        </div>
+        <div id="audioStatus" class="audio-status">Bitte gib einen Suchbegriff oder einen direkten Link ein.</div>
+
+        <table class="info-table">
+            <tr>
+                <th>Künstler:</th>
+                <td id="cardArtist">-</td>
+            </tr>
+            <tr>
+                <th>Erscheinungsjahr:</th>
+                <td id="cardDate">-</td>
+            </tr>
+            <tr>
+                <th>Land:</th>
+                <td id="cardCountry">-</td>
+            </tr>
+            <tr>
+                <th>Status:</th>
+                <td id="cardStatus">-</td>
+            </tr>
+            <tr>
+                <th>Label:</th>
+                <td id="cardLabel">-</td>
+            </tr>
+            <tr>
+                <th>Format:</th>
+                <td id="cardFormat">-</td>
+            </tr>
+            <tr>
+                <th>Barcode (EAN/UPC):</th>
+                <td id="cardBarcodeNum">-</td>
+            </tr>
+        </table>
+
+        <div class="lyrics-section">
+            <div class="links-title">Lyrics</div>
+            <pre id="lyricsContent">Bitte warten …</pre>
+        </div>
+
+        <div class="links-section">
+            <div class="links-title">Streams & Kauf</div>
+            <div id="musicLinks" class="music-links"></div>
+        </div>
+
+        <div class="barcode-container">
+            <svg id="barcode"></svg>
+            <p id="noBarcodeText" style="color: red; display: none;">Kein Barcode in der Datenbank verfügbar.</p>
+        </div>
+    </div>
+
+    <section class="selection-panel">
+        <div class="selection-head">
+            <h2>Ausgewählte Songs</h2>
+            <button id="downloadAllButton" type="button" class="secondary">Alle herunterladen</button>
+        </div>
+        <div id="selectedSongs" class="selected-songs"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
