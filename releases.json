@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Abbey Road",
+    "artist": "The Beatles",
+    "artist-credit": [{"name": "The Beatles"}],
+    "date": "1969-09-26",
+    "country": "GB",
+    "media": [{"format": "CD"}],
+    "barcode": " 978-0-7123-0058-3 "
+  },
+  {
+    "title": "Sehnsucht",
+    "artist": "Rammstein",
+    "artist-credit": [{"name": "Rammstein"}],
+    "date": "1997",
+    "country": "DE",
+    "media": [{"format": "CD"}],
+    "barcode": "4007192200276"
+  },
+  {
+    "title": "The Dark Side of the Moon",
+    "artist": "Pink Floyd",
+    "artist-credit": [{"name": "Pink Floyd"}],
+    "date": "1973-03-01",
+    "country": "GB",
+    "media": [{"format": "Vinyl"}],
+    "barcode": "074643809622"
+  }
+]
