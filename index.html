@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song & Barcode Finder</title>
+    <!-- JsBarcode Bibliothek zum Generieren des Barcodes -->
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Album & Barcode Finder</h1>
+    <p class="subtitle">Suche nach Alben, Künstlern und Barcodes – modern, schnell und mit Covern.</p>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Song- oder Albumtitel eingeben (z.B. Sehnsucht)...">
+        <button onclick="searchRelease()">Suchen</button>
+    </div>
+
+    <ul id="resultsList" class="results-list"></ul>
+
+    <div id="infoCard" class="card">
+        <div class="detail-head">
+            <img id="coverImage" class="detail-cover" alt="Albumcover">
+            <div>
+                <h2 id="cardTitle">Albumtitel</h2>
+                <p id="cardArtistLine" style="margin: 4px 0 0; color: #94a3b8;">Künstler</p>
+            </div>
+        </div>
+        <table class="info-table">
+            <tr>
+                <th>Künstler:</th>
+                <td id="cardArtist">-</td>
+            </tr>
+            <tr>
+                <th>Erscheinungsjahr:</th>
+                <td id="cardDate">-</td>
+            </tr>
+            <tr>
+                <th>Land:</th>
+                <td id="cardCountry">-</td>
+            </tr>
+            <tr>
+                <th>Format:</th>
+                <td id="cardFormat">-</td>
+            </tr>
+            <tr>
+                <th>Barcode (EAN/UPC):</th>
+                <td id="cardBarcodeNum">-</td>
+            </tr>
+        </table>
+
+        <div class="links-section">
+            <div class="links-title">Streams & Kauf</div>
+            <div id="musicLinks" class="music-links"></div>
+        </div>
+
+        <div class="barcode-container">
+            <svg id="barcode"></svg>
+            <p id="noBarcodeText" style="color: red; display: none;">Kein Barcode in der Datenbank verfügbar.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
