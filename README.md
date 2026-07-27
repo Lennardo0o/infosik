@@ -1,2 +1,2 @@
 # Infosik
-infosik (info-musik) ist ein Werkzeug das es dir ermöglichen soll die Infos deiner musik einzusehen und Herunterzuladen.
+infosik (info-musik) ist ein Werkzeug welches dir ermöglichen soll die Infos deiner musik einzusehen und Herunterzuladen.
