@@ -1,2 +1,2 @@
-# websites
-Websites, Tools in Websites, and other web stuff i think. :)
+# Infosik
+infosik (info-musik) ist ein Werkzeug das es dir ermöglichen soll die Infos deiner musik einzusehen und Herunterzuladen.
